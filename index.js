@@ -10,18 +10,17 @@ const main = () => {
       if (err !== null) {
         console.log(err);
       }
-      console.log(
         summary.run.executions.map((el) => {
           // console.log(el.response.code)
           if (`${el.response.code}`.startsWith("2")) {
+            console.log("SUCCESS: ", el.request.url.path)
             // console.log("success")
           } else {
-            console.log("exiting with error")
+            console.log("exiting with error", el)
             process.exit(1);
             // console.log("error")
           }
         })
-      );
     });
 };
 

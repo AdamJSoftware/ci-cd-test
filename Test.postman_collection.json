@@ -11,12 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://google.com",
-					"protocol": "https",
+					"raw": "http://localhost:8080/ping",
+          "port": 8080,
+					"protocol": "http",
 					"host": [
-						"google",
-						"com"
-					]
+						"localhost"
+					],
+          "path": ["ping"]
 				}
 			},
 			"response": []
@@ -27,12 +28,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://google.com",
-					"protocol": "https",
+					"raw": "http://localhost:8080/pong",
+          "port": 8080,
+					"protocol": "http",
 					"host": [
-						"google",
-						"com"
-					]
+						"localhost"
+					],
+          "path": ["pong"]
+
 				}
 			},
 			"response": []
