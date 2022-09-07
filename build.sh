@@ -1,3 +1,3 @@
 pwd
-go build
-./ci-cd-test
+npm install
+npm run index.js

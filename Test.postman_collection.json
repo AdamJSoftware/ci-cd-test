@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "48e2645d-44a9-4f37-8e2f-b12d5f8320ca",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "OK Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://google.com",
+					"protocol": "https",
+					"host": [
+						"google",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 Response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://google.com/non-existent",
+					"protocol": "https",
+					"host": [
+						"google",
+						"com"
+					],
+					"path": [
+						"non-existent"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
