@@ -1,3 +1,3 @@
 pwd
 npm install
-npm run index.js
+node index.js
