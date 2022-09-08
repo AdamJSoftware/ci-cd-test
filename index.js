@@ -29,7 +29,7 @@ const main = () => {
       envVar: require("./Test.postman_environment.json").values.map((el) => {
         return {
           "key": el.key,
-          "value": process.env[key.toUpperCase()] || el.value
+          "value": process.env[el.key.toUpperCase()] || el.value
         }
       }),
       environment: require("./Test.postman_environment.json"),
