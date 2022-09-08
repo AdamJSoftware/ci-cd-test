@@ -11,8 +11,11 @@ const main = () => {
   );
 
   if(collections.length -1 > parseInt(process.env.CIRCLE_NODE_INDEX)){
+    console.log("No need for this runner")
     process.exit(0)
   }
+
+  console.log(`RUNNER ${process.env.CIRCLE_NODE_INDEX} ACTIVE`)
 
 
   newman
