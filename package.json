@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "global": "^4.4.0",
+    "lodash": "^4.17.21",
     "newman": "^5.3.2",
     "vscode-langservers-extracted": "^4.4.0"
   }
