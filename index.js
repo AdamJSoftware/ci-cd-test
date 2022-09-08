@@ -10,7 +10,7 @@ const main = () => {
     Math.ceil(original_collection.item.length / 4)
   );
 
-  if(collections.length -1 > parseInt(process.env.CIRCLE_NODE_INDEX)){
+  if(parseInt(process.env.CIRCLE_NODE_INDEX) > collections.length - 1){
     console.log("No need for this runner")
     process.exit(0)
   }
