@@ -1,6 +1,8 @@
 const newman = require("newman");
 
 const main = () => {
+  console.log(process.env.CIRCLE_NODE_TOTAL)
+  console.log(process.env.CIRCLE_NODE_INDEX)
   newman
     .run({
       collection: "./Test.postman_collection.json",
