@@ -33,4 +33,5 @@ workflows:
     jobs:
       - "Checkout"
       - "Test":
-          requires: "Checkout"
+          requires: 
+            - "Checkout"
