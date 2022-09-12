@@ -32,6 +32,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - "Checkout"
-      - "Test":
+      - "Newman":
           requires: 
             - "Checkout"
