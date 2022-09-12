@@ -1,13 +1,20 @@
 const newman = require("newman");
 const _ = require("lodash");
+const dotenv = require("dotenv")
 
 const main = () => {
+  if(process.env.CIRCLE_NODE_TOTAL === undefined) {
+    process.env.CIRCLE_NODE_TOTAL = "1"
+  }
+  if(process.env.CIRCLE_NODE_INDEX === undefined) {
+    process.env.CIRCLE_NODE_INDEX = "0"
+  }
   console.log(process.env.CIRCLE_NODE_TOTAL);
   console.log(process.env.CIRCLE_NODE_INDEX);
   const original_collection = require("./Test.postman_collection.json");
   const collections = _.chunk(
     original_collection.item,
-    Math.ceil(original_collection.item.length / 4)
+    Math.ceil(original_collection.item.length / parseInt(process.env.CIRCLE_NODE_TOTAL))
   );
 
   if (parseInt(process.env.CIRCLE_NODE_INDEX) > collections.length - 1) {
