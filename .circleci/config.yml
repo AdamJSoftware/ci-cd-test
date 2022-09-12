@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
         command: "pwd"
-      - run:
+      - run2:
         command: "ls -all"
   "Newman":
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
