@@ -28,6 +28,8 @@ jobs:
     
     parallelism: 2
     steps:
+      - attach_workspace:
+          at: /root/project
       - run:
           name: "Run newman"
           command: "pwd && ./build.sh"
