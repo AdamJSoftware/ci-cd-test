@@ -7,7 +7,7 @@ version: 2.1
 jobs:
   checkout:
     docker:
-      - image: cimg/base
+      - image: alpine:latest
     steps:
       - checkout
   test:
